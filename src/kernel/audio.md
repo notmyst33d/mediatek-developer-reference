@@ -2,7 +2,7 @@
 Mediatek platform uses ALSA, it exposes a lot of controls which are used to perform various tasks (e.g. switching routes).
 
 ## Terminology
-- **ADDA** - Analog to Digital & Digital to Analog Converter. Usually used for headphones due to ADDA's ability to handle headset microphones.
+- **ADDA** - Analog to Digital & Digital to Analog Converter. Usually used for headphones due to ADDA's ability to handle both headset and it's microphone.
 - **I2S** - Inter-Integrated Circuit Sound. Usually used for speakers.
 - **DL** - Downlink/sink.
 - **UL** - Uplink/source.

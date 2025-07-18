@@ -17,6 +17,8 @@ Modern Mediatek ALSA drivers use kernel streaming, multiple buffers are allocate
 - `Playback_3`/`DL3` - Isolated deep buffer fallback, used when `Playback_2` isn't available.
 - `Playback_12`/`DL12` - VoIP playback buffer.
 
+Even though these buffers have specific roles in Audio HAL, they are multipurpose and can be used for anything (e.g. `Playback_12` can be used for music playback).
+
 ## ALSA Controls
 ### Scenario
 - `deep_buffer_scenario` - Controls if route is using deep buffer or not.
@@ -31,8 +33,8 @@ Modern Mediatek ALSA drivers use kernel streaming, multiple buffers are allocate
 - `ADDA_DL_CHn DLx_CHn` - Route channel `n` of ADDA to channel `n` of downlink `x`.
 - `I2Sx_CHn DLy_CHn` - Route channel `n` of I2S device `x` to channel `n` of downlink `y`.
 
-## HiFi Audio
-You can use `S24_LE` and `S32_LE` sample formats to get HiFi audio.
+## Hi-Res Audio
+Mediatek ALSA drivers provide sample formats `S24_LE` and `S32_LE` as well as sample rates up to 192000.
 
 If you get distorted audio when using `S24_LE` or `S32_LE` sample formats, it means your volume is too high, you can try lowering it by 48dB:
 ```shell

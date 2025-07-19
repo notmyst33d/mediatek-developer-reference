@@ -122,6 +122,7 @@ html:not(.js) .page-wrapper,
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    float: left;
 }
 table td {
     padding: 3px 20px;

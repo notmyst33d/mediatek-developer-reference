@@ -1,9 +1,9 @@
 <div class="warning">
-Mediatek ALSA drivers are highly unstable when using ALSA API manually and they may cause a kernel panic. Consider interfacing with Audio HAL instead. 
+Kernel drivers are highly unstable when using ALSA API manually and they may cause a kernel panic. Consider interfacing with Audio HAL instead. 
 </div>
 
 # Audio
-Modern Mediatek ALSA drivers use kernel streaming, multiple buffers are allocated and are routed dynamically using [ALSA controls](#alsa-controls).
+Modern kernel drivers use kernel streaming, multiple buffers are allocated and are routed dynamically using [ALSA controls](#alsa-controls).
 
 ## Terminology
 - **ADDA** - Analog to Digital & Digital to Analog Converter. Usually used for headphones due to ADDA's ability to handle both headset and it's microphone.
@@ -34,7 +34,7 @@ Even though these buffers have specific roles in Audio HAL, they are multipurpos
 - `I2Sx_CHn DLy_CHn` - Route channel `n` of I2S device `x` to channel `n` of downlink `y`.
 
 ## Hi-Res Audio
-Mediatek ALSA drivers provide sample formats `S24_LE` and `S32_LE` as well as sample rates up to 192000.
+Kernel drivers provide sample formats `S24_LE` and `S32_LE` as well as sample rates up to 192000.
 
 If you get distorted audio when using `S24_LE` or `S32_LE` sample formats, it means your volume is too high, you can try lowering it by 48dB:
 ```shell
